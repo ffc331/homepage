@@ -1,0 +1,81 @@
+textarea {
+    padding:15px 15px; 
+    border:3px dotted #ffc331;
+    /* background-color: #ffc331; */
+    color: rgb(0, 0, 0);
+    border:3 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    resize: none;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+#draw{
+    border:3px dotted #ffc331;
+
+}
+
+#stamp {
+   opacity:0.5;
+   cursor: url("../../res/cursor/mouse11.png"), auto;
+}
+#stamp:hover{
+    opacity:1;
+}
+
+.letterBox{
+    /* this width　800px make   @media all and (min-width: 800px)  800 into 1040 ???*/
+    /* width: 560px; */
+    width: 50%;
+    /* height: 270px; */
+
+    display: flex;
+    justify-content:space-around;
+    /* flex-wrap:nowrap; */
+    flex-direction:row;
+    background-color: #ffc331;
+}
+
+.con-draw{
+    width: 300px;
+    margin: 15px;
+    background-color: white;
+    cursor: url("../../res/cursor/mouse14.png") , auto;
+}
+
+.con-textarea{
+    /* width: 300px; */
+    width: 50%;
+    margin: 15px;
+}
+
+#saysth{
+    width: 100%;
+    height: 100%;
+
+    padding:15px 15px; 
+    border:3px dotted #ffc331;
+    /* background-color: #ffc331; */
+    color: rgb(0, 0, 0);
+    border:3 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    resize: none;
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    cursor: url("../../res/cursor/mouse13.png"), auto;
+}
+
+.con-stamps{
+    width: 90px;
+    display: flex;
+    flex-direction:column;
+    margin: 15px;
+}

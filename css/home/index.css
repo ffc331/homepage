@@ -1,0 +1,305 @@
+  html, body {
+    height: 100%;
+    margin: 0;
+    /* cursor: url("../../res/cursor.png"), auto; */
+    cursor: url("../../res/cursor/mouse01.png"), auto;
+    /* min-height: 968px; */
+  }
+  body {
+    display: flex; /*使物件依序排列*/
+    flex-direction: column; /*使物件垂直排列*/
+    overflow: overlay;
+  }
+
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  div:hover{
+    
+  }
+
+  div{
+    /* background-color:whitesmoke; */
+    /* cursor: url("../../res/cursor.png"), auto; */
+  }
+
+  a{
+    cursor: url("../../res/cursor/mouse02.png"), auto;
+  }
+
+  p{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-style: Black;
+  }
+
+  
+
+  .gridbox{
+    /* border inside box */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+  }
+  .bottomLine{
+    border-bottom: 3px solid;
+  }
+
+  .wrapper {
+    flex-grow: 1; /*可佔滿垂直剩餘的空間*/
+    display: flex;  
+    /* 為啥對所有東西排ROW 但是 MAIN 和ASIDE可以並排  或是說 為啥HEADER和FOOTER可以上下排 ROW是水平排列阿 為啥WRAP換行了*/
+    /* flex-flow: row wrap; */
+    /* font-weight: bold; */
+    min-width: 1311px;
+    text-align: center; 
+
+    height: calc(100% - 60px);
+  }
+  .footer {
+    position: fixed;
+    bottom: 0px;
+    /* background-color: gray; */
+
+    height: 60px;
+    width: 100%;
+
+    border-top: 3px solid;
+  }
+
+  .header {
+    position: fixed;
+    /* background-color: sienna; */
+    border-bottom: 3px solid;
+
+    height: 60px;
+    width: 100%;
+  }
+
+  .header-time{
+    width: 240px;
+    height: 100%;
+
+    float: right;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    border-left: 3px solid;
+  }
+  .header-time >p{
+    text-align: center;
+    margin: 0px;
+  }
+  
+  .main {
+    text-align: left;
+    /* background: whitesmoke; */
+
+    width: 100%;
+    /* height: calc(100%-120px); */
+    /* height: calc(100% - 60px); */
+    height: 100%;
+
+    /* min-height: 810px; */
+  }
+
+  .container_email {
+    /* background-color: brown; */
+    /* overflow-y :auto; */
+    /* overflow-y:scroll;  */
+
+    /* height: calc(100% - 300px); */
+    /* height: 51vh; */
+    height: calc(100vh - 60px*2 - 300px);
+    min-height: 120px;
+    width: 100%;
+
+    /* min-height: 510px; */
+  }
+
+  .container_intro {
+    /* background-color: seagreen; */
+
+    height: 300px;
+    width: 100%;
+
+    min-height: 300px;
+    bottom:0px;
+
+    display: flex; 
+    flex-direction:row;
+    justify-content: flex-start;
+    
+    border-top: 3px solid;
+  }
+
+  .bulletinboard{
+    width: 50%;
+    
+    border-right: 3px solid;
+    padding: 15px;
+
+    display: flex;
+	  flex-direction: column;
+  }
+  /* https://stackoverflow.com/questions/31313589/how-to-add-fade-in-and-fade-out-when-changing-between-texts-in-javascript */
+  .bulletinboard>p{
+    opacity: 1;
+    transition: opacity 0.5s;
+    margin: 0px;
+  }
+  .hide {
+      opacity: 0 !important;
+  }
+  .boardtext{
+    flex: 1;
+  }
+
+
+  .email{
+    display: flex;
+    align-items: center;
+    float: left;
+    width: 50%;
+    height: 60px;
+    border-bottom: 3px solid;
+    /* border-left: 3px solid; */
+
+    overflow:hidden; /* 讓超出 DIV 寬度範圍的字串隱藏。 */
+    white-space:nowrap; /* 讓多餘的字串不要自動折行。 */
+    text-overflow:ellipsis;  /* 用點點點（...）來表示被切斷的字串。 */
+    
+    /* min-width: 250px; */
+  }
+
+  .clickBox:hover{
+    background-color: #ffc331;
+  }
+
+  .emailtag0{
+    border-right: 3px solid;
+  }
+
+  .container_email{
+    overflow: overlay;
+    /* background-color: #ffc331; */
+  }
+
+  .container_email_inpage{
+    background-color: #ffc331;
+  }
+
+  .container_email::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .container_email::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  .aside-1 {
+    /* background: gold; */
+  }
+  
+  .sidebar {
+    /* background: hotpink; */
+
+    /* height: calc(100% - 60px); */
+  }
+
+  .side-year {
+    /* background: blueviolet; */
+    width: 100%;
+    /* height: calc(100% - 180px); */
+    height: calc(100vh - 60px*2 - 180px);
+
+    /* min-height: 300px; */
+    border-left: 3px solid;
+    
+    display: flex;
+    flex-direction: column;
+    /* overflow: overlay; */
+    overflow: hidden;
+  }
+
+  .side-year>div{
+    flex: 1;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: calc((100vh - 60px*2 - 180px)/7);
+  }
+
+  #side-year-img{
+    /* object-fit: contain; */
+    /* object-fit:scale-down; */
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+
+  .sidebar-menu {
+    /* background: cornflowerblue; */
+    width: 100%;
+    display: flex;  
+    height: 180px;
+  }
+
+  .menu-bar{
+    /* background: seagreen; */
+    width: 60px;
+
+    border-bottom: 3px solid;
+    border-right: 3px solid;
+    border-left: 3px solid;
+  }
+
+  .menu-weather{
+    /* background: salmon; */
+    width: 180px;
+
+    border-bottom: 3px solid;
+  }
+
+  .menu-box{
+    width: 100%;
+    height: 60px;
+    display: flex;
+   justify-content: center;
+  }
+
+  .menu-icon{
+    width: 100%;
+  }
+
+  @media all and (min-width: 600px) {
+    /* .aside { flex: 1 0 0; } */
+  }
+  
+  @media all and (min-width: 800px) {
+    .main    { flex: 7 0px; }
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .sidebar { order: 3; }
+    .footer  { order: 4; }
+  }
+
+  @media all and (min-width: 1300px) {
+    /* .main    { flex: 7 0px; } */
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .sidebar { order: 3; }
+    .footer  { order: 4; }
+  }
+

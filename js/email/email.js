@@ -88,8 +88,9 @@ function getURLtag(){
 function loadtest(){
     var diaryfile = getURLtag();
     let imgURL = mail_Path + diaryfile + mail_Filetype;
-    console.log(imgURL);
+    console.log(decodeURIComponent(diaryfile));
     addElement("emails",imgURL);
+    addTitle("header-title",decodeURIComponent(diaryfile));
 }
 loadtest();
 
@@ -98,5 +99,14 @@ function addElement(obj,index) {
     var diaryBox = document.createElement("img");
     diaryBox.setAttribute("class", "mailImg");
     diaryBox.setAttribute("src", index);
+    parent.appendChild(diaryBox);
+}
+
+function addTitle(obj,index) {
+    var parent = document.getElementById(obj);
+    var diaryBox = document.createElement("p");
+    // diaryBox.setAttribute("class", "mailImg");
+    diaryBox.innerText = index;
+    // diaryBox.setAttribute("src", index);
     parent.appendChild(diaryBox);
 }

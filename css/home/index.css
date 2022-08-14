@@ -98,6 +98,11 @@
     text-align: center;
     margin: 0px;
   }
+
+  .header-title{
+    display: flex;
+    justify-content: center;
+  }
   
   .main {
     text-align: left;
@@ -241,11 +246,33 @@
     min-height: calc((100vh - 60px*2 - 180px)/7);
   }
 
-  #side-year-img{
+  .side-year-img{
     /* object-fit: contain; */
     /* object-fit:scale-down; */
     max-width: 100%;
     max-height: 100%;
+  }
+
+  #diary2015{
+    cursor: url("../../res/cursor/mouse03.png"), auto;
+  }
+  #diary2016{
+    cursor: url("../../res/cursor/mouse05.png"), auto;
+  }
+  #diary2017{
+    cursor: url("../../res/cursor/mouse06.png"), auto;
+  }
+  #diary2018{
+    cursor: url("../../res/cursor/mouse07.png"), auto;
+  }
+  #diary2019{
+    cursor: url("../../res/cursor/mouse08.png"), auto;
+  }
+  #diary2020{
+    cursor: url("../../res/cursor/mouse09.png"), auto;
+  }
+  #diary2021{
+    cursor: url("../../res/cursor/mouse10.png"), auto;
   }
 
 
